@@ -12,4 +12,7 @@ export class ModalComponent implements OnInit {
     // console.log(this.modal.visible);
   }
   ngOnInit(): void {}
+  closeModal() {
+    this.modal.toggleModal();
+  }
 }
