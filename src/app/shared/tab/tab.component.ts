@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tab.component.css'],
 })
 export class TabComponent {
-  @Input() tabTitle = '';
+  @Input() tabTitle: string = '';
+  @Input() active: boolean = false;
 }
