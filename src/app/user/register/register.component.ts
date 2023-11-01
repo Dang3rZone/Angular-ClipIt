@@ -9,7 +9,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class RegisterComponent {
   name = new FormControl('', [Validators.required, Validators.minLength(3)]);
   email = new FormControl('', [Validators.required, Validators.email]);
-  age = new FormControl('', [Validators.required]);
+  age = new FormControl('', [
+    Validators.required,
+    Validators.min(16),
+    Validators.max(90),
+  ]);
   password = new FormControl('', [Validators.required]);
   confirm_password = new FormControl('', [Validators.required]);
   phoneNumber = new FormControl('', [Validators.required]);
